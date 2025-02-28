@@ -35,7 +35,7 @@
 
 <body>
   <!-- Navbar Start -->
-  <?php include 'navbar.html'; ?>
+  <div id="navbar"></div>
   <!-- Navbar End -->
 
   <!-- Header Start -->
@@ -508,6 +508,13 @@
 
   <!-- Template Javascript -->
   <script src="js/main.js"></script>
+
+  <!-- Include navbar -->
+  <script>
+    fetch("navbar.html")
+      .then(response => response.text())
+      .then(data => document.getElementById("navbar").innerHTML = data);
+  </script>
 </body>
 
 </html>
